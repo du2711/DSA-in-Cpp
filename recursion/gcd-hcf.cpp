@@ -3,7 +3,6 @@
 using namespace std;
 
 int gdc(int a,int b){
-    int rem;
     while(b!=0){
         int rem=a%b;
         a=b;

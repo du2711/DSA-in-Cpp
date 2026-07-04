@@ -23,9 +23,11 @@ int main(){
 
 
     string str;
-    cout<<"Enter your string: ";getline(cin,str);
+    cout<<"Enter your string: ";
+    getline(cin,str);
 
-    vector<string> li;comb(str,0,"",li,v);
+    vector<string> li;
+    comb(str,0,"",li,v);
 
     for(string ele : li){
         cout<<ele<<" ";
