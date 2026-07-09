@@ -2,8 +2,18 @@
 #include<vector>
 using namespace std;
 
-vector<int> selectionSort(vector<int> &arr){
+void swap(int &a,int &b){
+    int temp=a;a=b;b=temp;
+}
 
+vector<int> selectionSort(vector<int> &arr){
+    for(int i=0;i<arr.size();i++){
+        int min=i;
+        for(int j=i+1;j<arr.size();j++){
+            if(arr[j]<arr[min]) min=j;
+        }
+        if(min!=i) swap(arr[i],arr[min]);
+    }
 }
 
 int main(){ 
