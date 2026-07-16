@@ -1,3 +1,6 @@
+{
+  "version": "0.2.0",
+  "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -5,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/C++/recursion",
-      "program": "d:/C++/recursion/build/Debug/outDebug",
+      "cwd": "d:/C++/sorting/sorting Algo",
+      "program": "d:/C++/sorting/sorting Algo/selectionSort.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "setupCommands": [
