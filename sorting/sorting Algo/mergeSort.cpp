@@ -27,17 +27,18 @@ void merge(vector<int> &arr,int l,int mid,int r){
     while(j<bn) arr[k++]=b[j++];
 }
 
-void mergesort(vector<int> &arr,int l,int r){
+void seperationAndMerger(vector<int> &arr,int l,int r){
     if(l>=r) return;
 
-    int mid=(l+r)/2;
-    mergesort(arr,0,mid);
-    mergesort(arr,mid+1,r);
+    int mid=l+(r-l)/2;
+    seperationAndMerger(arr,l,mid);
+    seperationAndMerger(arr,mid+1,r);
     merge(arr,l,mid,r);
 }
 
 vector<int> mergeSort(vector<int> &ar){
-    mergesort(ar,0,ar.size()-1);
+    seperationAndMerger(ar,0,ar.size()-1);
+    return ar;
 }
 
 int main(){ 
