@@ -28,12 +28,6 @@ void merge(vector<int> &arr,int l,int mid,int r){
 }
 
 void mergesort(vector<int> &arr,int l,int r){
-    // int e=arr.size();
-    // int m=arr.size();
-
-    // if(m%2==0) m=m/2;
-    // else m=(m/2)+1;
-
     if(l>=r) return;
 
     int mid=(l+r)/2;
