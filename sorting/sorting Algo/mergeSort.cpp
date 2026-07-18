@@ -2,38 +2,41 @@
 #include<vector>
 using namespace std;
 
-void merge(vector<int> &arr,int l,int mid,int r){
-    int an =mid-l+1;
-    int bn = r-mid;
-
-    vector<int> a(an);
-    vector<int> b(bn);
-
-    for(int i=0;i<an;i++){
-        a[i]=arr[l+i];
+void merge(vector<int> &arr,int st,int mid,int end){
+    vector<int> temp;
+    int i=st;
+    int j=mid+1;
+    while(i<=mid && j<=end){
+        if(arr[i]<=arr[j]){
+            temp.push_back(arr[i]);
+            i++;
+        }
+        else{
+            temp.push_back(arr[j]);
+            j++;
+        }
     }
-    for(int j=0;j<bn;j++){
-        b[j]=arr[mid+1+j];
+    while(i<=mid){
+        temp.push_back(arr[i]);
+        i++;
     }
-
-    int i=0,j=0,k=l;
-
-    while(i<an && j<bn){
-        if(a[i]<b[j]) arr[k++]=a[i++];
-        else arr[k++]=b[j++];
+    while(j<=end){
+        temp.push_back(arr[j]);
+        j++;
     }
-
-    while(i<an) arr[k++]=a[i++];
-    while(j<bn) arr[k++]=b[j++];
+    for(int k=0;k<temp.size();k++){
+        arr[k+st]=temp[k];
+    }
 }
 
-void seperationAndMerger(vector<int> &arr,int l,int r){
-    if(l>=r) return;
+void seperationAndMerger(vector<int> &arr,int st,int end){
 
-    int mid=l+(r-l)/2;
-    seperationAndMerger(arr,l,mid);
-    seperationAndMerger(arr,mid+1,r);
-    merge(arr,l,mid,r);
+    if(st>=end) return;
+    int mid=st+(end-st)/2;
+
+    seperationAndMerger(arr,st,mid);
+    seperationAndMerger(arr,mid+1,end);
+    merge(arr,st,mid,end);
 }
 
 vector<int> mergeSort(vector<int> &ar){
