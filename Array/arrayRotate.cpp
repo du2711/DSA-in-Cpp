@@ -14,7 +14,7 @@ void reverse(int arr[],int n,int start,int end){
 
 int main(){ 
     int n;
-    cout<<"Enter siz eof array: ";
+    cout<<"Enter size eof array: ";
     cin>>n;
 
     int arr[n];
