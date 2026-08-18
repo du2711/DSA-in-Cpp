@@ -39,6 +39,10 @@ public:
     }
 };
 
+void change(student &c){
+    c.name="mayaa";
+}
+
 int main(){ 
     // rec *r1=new rec(6,7);
     // cout<<r1->l<<" "<<r1->b;
@@ -55,6 +59,8 @@ int main(){
 
     student s1("raghav ram",76,8.2);
 
+    cout<<s1.rno<<" "<<s1.name<<" "<<s1.gpa<<endl;
+    change(s1);
     cout<<s1.rno<<" "<<s1.name<<" "<<s1.gpa<<endl;
     return 0;
 }
