@@ -18,13 +18,10 @@ public:
 
 int main(){ 
     cricketer c1("Virat Kohli",25000,55.2);
-    cricketer c2("Rohit Sharma",18000,47.8);
+    cricketer *c2=new cricketer("Rohit Sharma",18000,47.8);
 
-    // int x=9;
-    // cout<<x<<endl;
-    // int* pr=&x;
-    // cout<<(*pr=3)<<endl;
-    // cout<<(x==*pr);
+    cout<<c1.name<<" "<<c1.runs<<endl;
+    cout<<c2->name<<" "<<c2->runs<<endl;
 
     return 0;
 }
