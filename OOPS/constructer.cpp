@@ -32,10 +32,19 @@ public:
     int rno;
     float gpa;
 
-    student(string s,int r,float g){
+    student(){           //default
+
+    }
+
+    student(string s,int r,float g){     //parametrised
         name=s;
         rno=r;
         gpa=g;
+    }
+
+    student(string s,int r){     //parametrised
+        name=s;
+        rno=r;
     }
 };
 
@@ -62,5 +71,17 @@ int main(){
     cout<<s1.rno<<" "<<s1.name<<" "<<s1.gpa<<endl;
     change(s1);
     cout<<s1.rno<<" "<<s1.name<<" "<<s1.gpa<<endl;
+
+    student x;
+    x.name="Raman";
+    x.rno=46;
+    x.gpa=9.6;
+
+    cout<<x.rno<<" "<<x.name<<" "<<x.gpa<<endl;
+
+    student s3("raghu",76);
+    s3.gpa=6.9;
+
+    cout<<s3.rno<<" "<<s3.name<<" "<<s3.gpa<<endl;
     return 0;
 }
