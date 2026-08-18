@@ -83,5 +83,7 @@ int main(){
     s3.gpa=6.9;
 
     cout<<s3.rno<<" "<<s3.name<<" "<<s3.gpa<<endl;
+
+    
     return 0;
 }
