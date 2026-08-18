@@ -15,5 +15,7 @@ int main(){
     x.rno=76;
     x.gpa=8.2;
 
+    cout<<x.name;
+
     return 0;
 }
