@@ -33,5 +33,7 @@ int main(){
     s1.name="hariom";
 
     student s2(76,"jussi",69.69);
+
+    
     return 0;
 }
