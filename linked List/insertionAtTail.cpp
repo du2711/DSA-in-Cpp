@@ -13,11 +13,11 @@ public:
     }
 };
 
-void insertAtHead(node* head,int &val){
-    node* newNode = new node(val);
-    newNode->address = head;
-    head = newNode;
-}
+// void insertAtHead(node* head,int &val){
+//     node* newNode = new node(val);
+//     newNode->address = head;
+//     head = newNode;
+// }
 
 void display(node* head){
     node* temp=head;
@@ -34,7 +34,6 @@ int main(){
     int val;
     cout<<"Enter element: ";
     cin>>val;
-    insertAtHead(head,val);
 
     display(head);
     return 0;
