@@ -13,11 +13,22 @@ public:
     }
 };
 
-// void insertAtHead(node* head,int &val){
-//     node* newNode = new node(val);
-//     newNode->address = head;
-//     head = newNode;
-// }
+void insertionAtTail(node* &list,int &val){
+    node* newNode= new node(val);
+    newNode->address=NULL;
+
+    node* temp=list;
+    if(list==NULL){
+        list=newNode;
+        return;
+    }
+
+    while(temp->address!=NULL){
+        temp=temp->address;
+    }
+
+    temp->address=newNode;
+}
 
 void display(node* head){
     node* temp=head;
@@ -35,6 +46,7 @@ int main(){
     cout<<"Enter element: ";
     cin>>val;
 
+    insertionAtTail(head,val);
     display(head);
     return 0;
 }
