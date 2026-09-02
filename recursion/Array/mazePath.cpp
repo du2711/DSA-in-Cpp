@@ -10,7 +10,7 @@ int maze(int cr,int cc,int er,int ec){
         rightWays+= maze(cr,cc+1,er,ec);
     }
     if(cc==ec){
-        downWays =maze(cr+1,cc,er,ec);
+        downWays +=maze(cr+1,cc,er,ec);
     }
     if(cr<er && cc<ec){
         rightWays+= maze(cr,cc+1,er,ec);
