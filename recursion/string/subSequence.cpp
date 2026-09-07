@@ -2,7 +2,6 @@
 #include<vector>
 using namespace std;
 
-
     void subseq(string &arr,int idx,string sum,vector<string> &result){
     if(idx==arr.size()){
         result.push_back(sum);
