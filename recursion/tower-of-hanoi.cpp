@@ -15,11 +15,11 @@ int power(int b,int p){
 }
 
 int hanoi(int n){
-    return power(n,2)-1;
+    return power(2,n)-1;
 }
 int main(){ 
     int n;
-    cout<<"Enter no of towers: ";
+    cout<<"Enter no of disks: ";
     cin>>n;
 
     cout<<hanoi(n);
